@@ -1334,7 +1334,7 @@ public:
     int fixedNumDecimalPlaces = -1;
     int textBoxWidth = 80, textBoxHeight = 20;
     IncDecButtonMode incDecButtonMode = incDecButtonsNotDraggable;
-    ModifierKeys::Flags modifierToSwapModes = ModifierKeys::ctrlAltCommandModifiers;
+    ModifierKeys::Flags modifierToSwapModes = ModifierKeys::shiftModifier;
 
     bool editableText = true;
     bool doubleClickToValue = false;
