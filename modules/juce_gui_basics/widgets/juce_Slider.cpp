@@ -204,7 +204,13 @@ public:
         // methods to set the two values.
         jassert (style != TwoValueHorizontal && style != TwoValueVertical);
 
+        double prevValue = newValue;
+
         newValue = constrainedValue (newValue);
+
+        // value changed, we must notify
+        if (newValue != prevValue)
+            notification = sendNotificationSync;
 
         if (style == ThreeValueHorizontal || style == ThreeValueVertical)
         {
